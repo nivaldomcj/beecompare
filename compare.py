@@ -47,7 +47,7 @@ def username(user_code):
     html = requests.get("https://www.urionlinejudge.com.br/judge/pt/profile/{}".format(user_code)).text
     soup = BeautifulSoup(html, "html.parser")
 
-    return soup.find("p", itemprop="name").text.encode("utf-8").strip()
+    return soup.find("p", itemprop="name").text.encode("utf-8").strip().decode("utf-8")
 
 
 def save(user_names, problems):
