@@ -43,11 +43,11 @@ def compare(user_codes):
     return [problems[1].difference(problems[0]), problems[0].difference(problems[1])]
 
 
-def username(usercode):
-    html = requests.get("https://www.urionlinejudge.com.br/judge/pt/profile/{}".format(usercode)).text
+def username(user_code):
+    html = requests.get("https://www.urionlinejudge.com.br/judge/pt/profile/{}".format(user_code)).text
     soup = BeautifulSoup(html, "html.parser")
 
-    return soup.find("p", itemprop="name").text.strip()
+    return soup.find("p", itemprop="name").text.encode("utf-8").strip()
 
 
 def save(user_names, problems):
