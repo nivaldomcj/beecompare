@@ -13,7 +13,14 @@ The result of the comparison is written in 2 CSV files, comparing user A vs user
 
 ## How to use
 
-Get the users ID who's you will compare and simply pass as command-line arguments. Example:
+First, install all the dependencies listed on `requirements.txt`.
+
+Then, get the users ID who's you will compare and simply pass as command-line arguments.
+
+User ID is the ID that can be found on your profile or on others profile, e.g: https://www.beecrowd.com.br/judge/pt/profile/64393. In this case, 64393 is the User ID.
+
+
+Example:
 
 ```
 $ python compare.py 64393 68813
